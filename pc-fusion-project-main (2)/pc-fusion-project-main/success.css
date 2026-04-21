@@ -1,0 +1,26 @@
+body { 
+    display: flex; 
+    padding-top: 300px;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    font-family: Arial, sans-serif;
+}
+        
+h1 { 
+    color: green; 
+}
+.btn{
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: rgba(0, 102, 255, 0.745);
+    border: none;
+    
+}
+.btn a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    
+
+}

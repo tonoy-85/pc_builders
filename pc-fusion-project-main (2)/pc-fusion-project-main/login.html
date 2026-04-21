@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+
+    <form action="login-val.php" class="login-form" id="login-form" method="post">
+        <fieldset>
+            <input type="text" name="email" id="email" placeholder="Enter email" required>
+            <span id="eemail"></span>
+
+            <input type="password" name="pass" id="pass" placeholder="Password" required>
+            <span id="epass"></span>
+
+            <div class="login-btn">
+                <!-- <input type="button" value="Login" onclick="fun()"> -->
+                <button type="submit" class="login-btn">Log In</button>
+            </div>
+            
+
+            <div class="forgot-pass">
+                <a href="#">Forgotten Password?</a>
+            </div>
+
+            <div class="new-account">
+                <a href="signup.html">Create new account</a>
+            </div>
+
+        </fieldset>
+
+    </form>
+
+    <script src="login-validation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+
+<body>
+  <div class="signup-field">
+    <form class="form" action="code.php" method="post">
+      <div class="name">
+        <input type="text" name="fname" id="fname" placeholder="First name" required />
+        <span id="efname"></span>
+      </div>
+
+      <div class="name">
+        <input type="text" name="surname" id="surname" placeholder="Surname" required />
+        <span id="esurname"></span>
+      </div>
+
+
+
+      <!-- Change by Avijit -->
+      <label class="section-label">Date of Birth</label>
+
+      <div class="dob-fields">
+        <input type="date" name="dob" id="dob">
+        <span id="edob"></span>
+        <!-- <input type="number" name="dob" id="dob" placeholder="29" min="1" max="31" required /> -->
+
+        <!-- <select required name="dob" id="dob">
+          <option value="" disabled selected></option>
+          <option value="1">Jan</option>
+          <option value="2">Feb</option>
+          <option value="3">Mar</option>
+          <option value="4">Apr</option>
+          <option value="5">May</option>
+          <option value="6">Jun</option>
+          <option value="7">Jul</option>
+          <option value="8">Aug</option>
+          <option value="9">Sep</option>
+          <option value="10">Oct</option>
+          <option value="11">Nov</option>
+          <option value="12">Dec</option>
+        </select> -->
+
+        <!-- <input type="number" placeholder="2002" min="1800" max="2025" required /> -->
+      </div>
+
+
+      <!-- Change by Avijit -->
+      <label class="section-label">Gender</label>
+      <div class="gender-fields">
+        <!-- <button type="button">Male</button>
+        <button type="button">Female</button>
+        <button type="button">Custom</button> -->
+        <input type="radio" name="gender" id="genderM" value="Male">
+        <label for="genderM">Male</label>
+        <input type="radio" name="gender" id="genderF" value="Female">
+        <label for="genderF">Female</label>
+        <input type="radio" name="gender" id="genderO" value="Other">
+        <label for="genderO">Other</label>
+      </div>
+
+      <div class="name">
+        <input type="text" name="email" id="email" placeholder="Email address" required />
+        <span id="eemail"></span>
+      </div>
+      <div class="name">
+        <input type="password" name="pass" id="pass" placeholder="Password" required />
+        <span id="epass"></span>
+
+      </div>
+
+
+      <!-- <button type="submit" class="signup-btn" >Sign Up</button> -->
+      <!-- <button type="submit" class="signup-btn" onclick="fun()">Sign Up</button> -->
+       <!-- <button class="signup-btn" onclick="fun()">
+        <a href="success.html">Sign Up</a>
+      </button> -->
+
+      <!-- <input type="button" value="Sign Up" onclick="fun()"> -->
+
+      <button type="submit" class="signup-btn">Sign Up</button>
+
+
+
+      <p class="login-text"><a href="login.html">Already have an account?</a></p>
+
+
+      <script src="signup-validation.js"></script>
+
+    </form>
+  </div>
+</body>
+
+</html>

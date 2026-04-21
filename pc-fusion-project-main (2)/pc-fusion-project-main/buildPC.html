@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build PC</title>
+    <link rel="stylesheet" href="buildPC.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Start of Navigation Section -->
+
+    <div id="nav">
+        <div class="nav-section left" id="logo">
+
+        </div>
+
+        <div class="nav-section center" id="links">
+            <a href="index.html">Home</a>
+            <a href="buildPC.html">Build PC</a>
+            <a href="buildsuggest.html">Pre-Build Suggesions</a>
+            <a href="guides.php">Guides</a>
+            <a href="comunity.html">Community</a>
+            <a href="support.html">Support</a>
+        </div>
+
+        <!-- This section is for Search bar and User icon -->
+
+        <div class="nav-section right">
+            <div id="search-container">
+                <i class="fa fa-search"></i>
+                <input type="search" placeholder="Search here ...">
+            </div>
+            <div id="user">
+                <a href="./signup.html">
+                    <i class="fa-solid fa-user-plus"></i>
+                </a>
+            </div>
+            <div id="cart">
+                <a href="./cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of Navigation Section -->
+
+    <div class="page">
+        <h2 class="title">Build Simulation Tool</h2>
+        <p class="subtitle">Drag and drop components to build your PC. Get instant compatibility checks, power consumption analysis, and performance estimates.</p>
+
+        <div class="pc_builder">
+
+            <div class="available_components" id="componentList">
+                <h3>Available Components</h3>
+            </div>
+
+            <div class="your_build">
+                <h3>Your Build</h3>
+
+                <div id="slot-cpu" class="slot"><i class="fa-solid fa-microchip"></i> Select CPU</div>
+                <div id="slot-gpu" class="slot"><i class="fa-solid fa-desktop"></i> Select GPU</div>
+                <div id="slot-motherboard" class="slot"><i class="fa-solid fa-server"></i> Select Motherboard</div>
+                <div id="slot-ram" class="slot"><i class="fa-solid fa-memory"></i> Select RAM</div>
+                <div id="slot-storage" class="slot"><i class="fa-solid fa-hard-drive"></i> Select Storage</div>
+                <div id="slot-psu" class="slot"><i class="fa-solid fa-bolt"></i> Select PSU</div>
+                <div id="slot-cooling" class="slot"><i class="fa-solid fa-fan"></i> Select Cooler</div>
+                <div id="slot-case" class="slot"><i class="fa-solid fa-computer"></i> Select Case</div>
+            </div>
+
+            <div class="summary_section">
+                <div class="summary_box">
+                    <h3>💲 Build Summary</h3>
+                    <p>Total Price: <span id="total-price">$0</span></p>
+                    <p>Power Consumption: <span id="power-usage">0W</span></p>
+                    <p>Components: <span id="component-count">0/8</span></p>
+                    <p>Build Score: <span id="build-score">0%</span></p>
+                </div>
+
+                <div class="compatibility_box">
+                    <h3>🧪 Compatibility Check</h3>
+                    <p id="compatibility-status" style="color: lightgreen;">
+                    ✔ All components compatible
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

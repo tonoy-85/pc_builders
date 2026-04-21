@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    background-color: #10172a;
+    color: white;
+}
+
+#nav {
+    height: 60px;
+    width: 100%;
+    background-color: rgba(16, 23, 42, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(132, 167, 255, 1);
+    z-index: 1000;
+}
+
+.nav-section {
+    display: flex;
+    align-items: center;
+}
+
+.left, .right {
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+}
+
+.center {
+    flex: 1;
+    justify-content: center;
+}
+
+#links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+#links a:hover {
+    color: #8aa5ff;
+}
+
+
+#search-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(16, 23, 42, 1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: width 0.4s ease;
+    overflow: visible;
+}
+
+#search-container input {
+    position: absolute;
+    right: 0;
+    width: 0;
+    opacity: 0;
+    height: 100%;
+    padding: 0 40px 0 15px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: black;
+    background: white;
+    z-index: 1;
+    border-radius: 20px;
+    transition: width 0.4s ease, opacity 0.3s ease;
+}
+
+#search-container.active {
+    width: 230px;
+}
+
+#search-container.active input {
+    width: 230px;
+    opacity: 1;
+}
+
+#search-container .fa {
+    position: absolute;
+    right: 15px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#search-container.active .fa {
+    color: black;
+}
+
+#user i, 
+#cart i {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#user i:hover, 
+#cart i:hover {
+    color: #8aa5ff;
+}
+
+
+body {
+    padding-top: 40px;
+}
+
+
+
+.title {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.title h1 {
+    font-size: 38px;
+}
+
+/* ---- FORM WRAPPER ---- */
+.form-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    background: #2c3144;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
+}
+
+.form-container h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* ---- LINE 1 ---- */
+.line1 {
+    margin-bottom: 25px;
+}
+
+.line1 input{
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    background: #d9d9d9;
+    color: #000;
+}
+
+/* ---- LINE 2 ---- */
+.line2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.line2 select, .line2 input{
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    background: #d9d9d9;
+    color: #000;
+}
+
+/* ---- LINE 3 ---- */
+.line3 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.line3 input{
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    background: #d9d9d9;
+    color: #000;
+}
+
+/* ---- LINE 4 (Image + Description) ---- */
+.line4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+/* Upload area box */
+.upload-box {
+    width: 100%;
+    height: 200px;
+    background: #d9d9d9;
+    border-radius: 12px;
+    border: 2px dashed #aaa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+.upload-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.upload-box input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Description box */
+.line4 textarea {
+    height: 200px;
+    background: #d9d9d9;
+    color: #000;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    padding: 15px;
+}
+
+/* ---- Upload Button ---- */
+.upload-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 22px;
+    border-radius: 12px;
+    background: #8a2cff;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.upload-btn:hover {
+    transform: scale(1.03);
+    background: #7b24e7;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+    .line3 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .line2, .line4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.explorebuild{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===================== COMMUNITY BUILD CARDS ===================== */
+.explorebuild-cards {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 32px;
+    padding: 0 20px;
+}
+
+/* 🔥 Modern card look */
+.build-card {
+    background: #1d2233;
+    border-radius: 18px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    transition: 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.build-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* IMAGE */
+.build-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.build-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s;
+}
+
+.build-card:hover .build-img img {
+    transform: scale(1.06);
+}
+
+/* TITLE */
+.build-card h2 {
+    font-size: 20px;
+    margin: 14px 18px 8px 18px;
+    font-weight: 600;
+}
+
+/* BASIC INFO (Type, Budget) */
+.build-card .basic-info {
+    margin: 0 18px 10px 18px;
+    font-size: 14px;
+    color: #c5c5c5;
+}
+
+/* SPECS GRID */
+.specs {
+    margin: 10px 18px 14px 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12px;
+    row-gap: 6px;
+}
+
+.specs p {
+    font-size: 13px;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+/* BUTTON */
+.view-btn {
+    width: calc(100% - 36px);
+    margin: 10px 18px 18px 18px;
+    padding: 10px;
+    background: #7c3aed;
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: 0.25s ease;
+}
+
+.view-btn:hover {
+    background: #602bd6;
+}

@@ -1,0 +1,106 @@
+
+body {
+  background-color: #0f1117;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+
+.signup-field {
+  background-color: #2d2f36;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 380px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+
+.form input,
+.form select {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+
+.name,
+.dob-fields,
+.gender-fields {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.section-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ddd;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.dob-fields select {
+  background: transparent;
+  appearance: none;
+  cursor: pointer;
+}
+
+.dob-fields select option {
+  background-color: #2d2f36;
+  color: #fff;
+}
+
+/* doing change Avijit */
+.gender-fields {
+  display: flex;
+  margin-right: 80px;
+  padding-top: 15px;
+  padding-right:100px;
+}
+
+.gender-fields button:hover {
+  border-color: #9b6cff;
+  color: #9b6cff;
+}
+
+
+.signup-btn {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  background-color: #9b6cff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #b78aff;
+}
+
+.login-text {
+  
+  text-align: center;
+  color: #aaa;
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+}
+.login-text a{
+  color: white;
+  text-decoration: none;
+}
